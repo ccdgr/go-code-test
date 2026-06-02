@@ -3,9 +3,15 @@ package main
 import "fmt"
 
 func exp() {
+	var (
+		c = 0
+	)
 	arr := make([]int, 0)
-	for i := range 10000 {
+	for i := range 100000 {
 		arr = append(arr, i)
-		fmt.Printf("i=%d, len=%d, cap=%d \n", i, len(arr), cap(arr))
+		if cap(arr) != c {
+			fmt.Printf("i=%d, cap=%d, f=%.4f \n", i, c, float64(cap(arr))/float64(c))
+			c = cap(arr)
+		}
 	}
 }
