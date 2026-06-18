@@ -5,6 +5,7 @@ go 1.25.5
 require (
 	github.com/go-mysql-org/go-mysql v1.13.0
 	github.com/rabbitmq/amqp091-go v1.10.0
+	github.com/sony/gobreaker v1.0.0
 	gorm.io/driver/mysql v1.6.0
 	gorm.io/gorm v1.31.1
 )
